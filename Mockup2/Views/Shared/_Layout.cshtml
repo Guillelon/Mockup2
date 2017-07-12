@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modern Business - @ViewBag.Title</title>
+
+    <!-- Bootstrap -->
+    <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("/css/modern-business.css")" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+                @Html.ActionLink("Iron Bank", "Index", new { controller = "Home" }, new { @class = "navbar-brand" })
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li id="about">
+                       @Html.ActionLink("About", "Index", "About")
+                    </li>
+                    <li id="services">
+                        @Html.ActionLink("Services", "Index", "Services")
+                    </li>
+                    <li id="contact">
+                        @Html.ActionLink("Contact", "Index", "Contact")
+                    </li>
+                    
+                    
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    @RenderBody()
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container" style="margin: 0; width:100%">
+        <hr>
+        <footer>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6">
+                    <img src="~/Context/Images/Logo.png" />
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-6" style="text-align: justify;  text-justify: inter-word;">
+                            <span style="font-size: 13px;">In mi urna, gravida non turpis quis, mollis rutrum orci. Morbi pellentesque commodo lectus, in fermentum felis volutpat vel. Morbi vestibulum bibendum ipsum.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin aliquam vitae erat nec ullamcorper.</span>
+                        </div>
+                    </div>                   
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+                <div class="col-lg-3">
+                    <strong>Contact</strong>
+                    <br />
+                    <br />
+                    <span>1 (800) 358 69 89</span>
+                    <br />
+                    <a href="#">contact@mtbank.com</a>
+                    <br />
+                    <span>257 Nice Street Suite 121</span>
+                    <br />
+                    <span>Orlando FL, 478985</span>
+                </div>
+            </div>
+        </footer>
+        <section id="credits" style="padding-top: 5px; padding-bottom: 15px">
+
+            <div class="container">
+                <div class="clear"></div>
+                <span class="copyright left">Copyright © 2011 - @DateTime.Now.Year <a href="3">Iron Bank</a>, All Rights Reserved</span>
+                <div class="clear"></div>
+            </div>
+        </section>
+
+    </div>
+    <!-- /.container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="@Url.Content("/js/bootstrap.js")"></script>
+    <script src="@Url.Content("/js/modern-business.js")"></script>
+</body>
+</html>
